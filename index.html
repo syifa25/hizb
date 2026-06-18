@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insmuco - Dokumentasi Kegiatan Muslimah</title>
+    <style>
+        /* --- Reset & Variabel Gaya --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #9A3B5A; /* Maroon/Rose hangat */
+            --secondary-color: #E8C5C8; /* Soft Pink */
+            --bg-light: #FAFAFA;
+            --text-dark: #333333;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* --- Navigasi --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, #FFF0F2 0%, #E8C5C8 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* --- Wadah Utama (Main Container) --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* --- Galeri Foto (Grid) --- */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .photo-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-info {
+            padding: 15px;
+        }
+
+        .photo-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* --- Galeri Video --- */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 500px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Rasio 16:9 */
+            height: 0;
+        }
+
+        .video-wrapper iframe, 
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <header>
+        <div class="navbar">
+            <div class="logo">INSMUCO</div>
+            <ul class="nav-links">
+                <li><a href="#Beranda">Beranda</a></li>
+                <li><a href="#Foto">Galeri Foto</a></li>
+                <li><a href="#Video">Dokumentasi Video</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Banner / Hero -->
+    <section class="hero" id="Beranda">
+        <h1>Insmuco</h1>
+        <p>Ruang kolaborasi, inspirasi, dan dokumentasi seluruh rangkaian kegiatan positif ummat dan muslimah.</p>
+    </section>
+
+    <div class="container">
+        
+        <!-- Bagian Dokumentasi Foto -->
+        <section id="Foto">
+            <h2 class="section-title">Dokumentasi Kegiatan (Foto)</h2>
+            <div class="photo-grid">
+                
+                <!-- Ganti 'https://via.placeholder.com/400x300' dengan link foto kegiatan Anda -->
+                <div class="photo-item">
+                    <img src="foto1.jpeg" alt="Kegiatan 1">
+                    <div class="photo-info">
+                        <h4>Kajian Rutin Muslimah</h4>
+                        <p>Berbagi ilmu dan mempererat tali silaturahmi antar sesama.</p>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="foto2.jpeg" alt="Kegiatan 2">
+                    <div class="photo-info">
+                        <h4>Bak bak Sosial Berkah</h4>
+                        <p>Penyaluran bantuan logistik untuk masyarakat yang membutuhkan.</p>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="foto1.jpeg" alt="Kegiatan 3">
+                    <div class="photo-info">
+                        <h4>Workshop Kewirausahaan</h4>
+                        <p>Pelatihan kemandirian ekonomi kreatif bagi muslimah.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bagian Dokumentasi Video -->
+        <section id="Video">
+            <h2 class="section-title">Dokumentasi Video</h2>
+            <div class="video-grid">
+
+                <!-- Contoh Menggunakan Embed YouTube -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <!-- Ganti 'dQw4w9WgXcQ' dengan ID video YouTube Anda -->
+                        <iframe src="video.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Dokumentasi Milad Insmuco</h3>
+                        <p>Kilas balik perjalanan dan pencapaian organisasi selama satu tahun terakhir.</p>
+                    </div>
+                </div>
+
+                <!-- Contoh Menggunakan File Video Lokal -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <!-- Ganti 'nama-file-video.mp4' dengan path video Anda jika ada -->
+                        <video controls poster="video.mp4">
+                            <source src="video.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Vlog Teaser Agenda Mendatang</h3>
+                        <p>Intip kesiapan panitia di balik layar dalam menyambut acara besar berikutnya.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Insmuco. Seluruh Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
